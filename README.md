@@ -12,6 +12,8 @@ La aplicacion conserva el nombre base de cada PDF en el archivo EPUB de salida y
 - **Conversión por lotes:** convierte todos los PDFs de la carpeta de origen y crea un EPUB por archivo en la carpeta de destino.
 - **Conservación del nombre base:** un PDF llamado `mi-libro.pdf` genera `mi-libro.epub`.
 - **Conservación de metadatos:** el conversor intenta recuperar `title` y `author` de los metadatos del PDF y incorporarlos al EPUB.
+- **Saltos de línea adaptados a la sección:** en capítulos, prólogos, agradecimientos y epílogos, los saltos dentro de una frase se unen con espacios para que el texto fluya; se conservan tras puntos y junto a encabezados. En el resto del documento se mantienen los saltos extraídos del PDF. La detección no distingue mayúsculas ni tildes y conserva la sección activa entre páginas.
+- **Imágenes internas:** las imágenes extraídas de las páginas se incorporan al EPUB junto con el texto.
 - **Procesamiento sin bloqueo de la interfaz:** el análisis y la conversión se ejecutan en hilos separados, permitiendo que la ventana permanezca interactiva.
 - **Registro de progreso y errores:** la interfaz muestra el avance, los archivos procesados y los problemas encontrados durante el análisis o la conversión.
 
